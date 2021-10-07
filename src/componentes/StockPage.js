@@ -2,14 +2,23 @@ import React from 'react';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import './home.css';
 export default function StockPage({ singleStockData }) {
-  let sign = Math.sign(singleStockData['Global Quote']['10. change percent']);
+  let sign = Math.sign(singleStockData['Global Quote']['09. change']);
   return (
     <Row>
       <Col lg={6} md={6} xs={12}>
         <h1>{singleStockData['Global Quote']['01. symbol']}</h1>
         <h3 className={sign == -1 ? 'red' : 'green'}>
+          <i
+            className={
+              sign == -1
+                ? 'bi bi-caret-down-fill red'
+                : 'bi bi-caret-up-fill green'
+            }
+          ></i>
           {singleStockData['Global Quote']['05. price']}{' '}
-          <span>{singleStockData['Global Quote']['10. change percent']}</span>
+          <span className="fallngain">
+            {singleStockData['Global Quote']['10. change percent']}
+          </span>
         </h3>
       </Col>
       <Col lg={6} md={6} xs={12}>

@@ -14,6 +14,7 @@ export default function SymbolTable({ filteredData, handleStock }) {
       </>
     );
   };
+
   return (
     <>
       {filteredData.length && (
