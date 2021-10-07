@@ -1,0 +1,12 @@
+.table {
+  margin-top: 30px;
+}
+.trow {
+  cursor: pointer;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
