@@ -82,10 +82,14 @@ export default function Home() {
             <StockPage singleStockData={singleStockData} />
           ) : (
             <Fragment>
+              <center className="heading">
+                <h1>Search Stock Here.. </h1>
+              </center>
               <Form.Control
                 type="text"
                 placeholder="Search For Symbol..."
                 onChange={search}
+                className="Search"
               />
               <SymbolTable
                 filteredData={filteredData}
